@@ -1,0 +1,497 @@
+
+.shenqing{
+  display: inline-block;
+  position: relative;
+  
+}
+.hr2,.hr3{
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color: #fff;
+}
+.zhuyeneirong{
+  position: absolute;
+  top: 285px;
+  
+}
+.biaoti1,.biaoti2,.biaoti3{
+  position: relative;
+  top: 225px;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+h3{
+  position: relative;
+  left: 20px;
+  top: 5px;
+}
+.fav-list {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  overflow-x: auto;
+  align-items: flex-start;
+}
+.fav-card {
+   width: 240px;
+   border-radius: 8px;
+   overflow: hidden;
+   background: #fff;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   transition: transform 0.2s;
+   cursor: pointer;
+}
+.fav-card:hover {
+  transform: translateY(-4px);
+}
+.fav-cover {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+}
+.fav-info {
+  padding: 12px;
+}
+.fav-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fav-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #999;
+}
+.buttonchakan,.buttonchakan2,.buttonchakan3{
+  top: 10px;
+  right: 20px;
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+.video-card {
+   width: 240px;
+   border-radius: 8px;
+   overflow: hidden;
+   background: #fff;
+   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+   transition: transform 0.2s;
+   cursor: pointer;
+}
+.video-card:hover {
+   transform: translateY(-4px);
+}
+
+.video-cover-wrapper {
+   position: relative;
+}
+
+.video-cover {
+   width: 100%;
+   height: 135px;
+   object-fit: cover;
+}
+
+.video-duration {
+   position: absolute;
+   bottom: 8px;
+   right: 8px;
+   background: rgba(0,0,0,0.7);
+   color: white;
+   font-size: 12px;
+   padding: 2px 6px;
+   border-radius: 4px;
+}
+.video-info {
+   padding: 12px;
+}
+.video-title {
+   font-size: 14px;
+   font-weight: 500;
+   margin-bottom: 8px;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.video-meta {
+   display: flex;
+   justify-content: space-between;
+   font-size: 12px;
+   color: #999;
+}.article-card {
+    width: 240px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+.article-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+.article-cover-wrapper {
+    position: relative;
+}
+.article-cover-wrapper::after {
+    content: "文章";
+    position: absolute;
+    bottom: 0px;
+    left: 8px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.article-cover {
+    width: 100%;
+    height: 135px;
+    object-fit: cover;
+}
+.article-info {
+    padding: 12px;
+}
+.article-title {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #999;
+}
+
+/* ========== 新增：右侧触发按钮 ========== */
+.right-toggle-btn {
+  position: fixed;
+  right: 0;
+  top: 350px;
+  width: 40px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-right: none;
+}
+
+.right-toggle-btn:hover {
+  width: 45px;
+  background-color: rgba(109, 205, 240, 0.9);
+}
+
+.right-toggle-btn span {
+  writing-mode: vertical-rl;
+  padding: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.right-toggle-btn:hover span {
+  color: white;
+}
+
+/* ========== 悬浮窗面板 - 简约方正风格 ========== */
+.floating-panel {
+  position: fixed;
+  right: 15px;
+  top: 260px;
+  width: 260px;
+  min-height: 350px;
+  max-height: 550px;
+  background-color: rgba(255, 255, 255,0.9);  /* 纯白背景，不透明 */
+  border-radius: 0px;  /* 去掉圆角，方正 */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  z-index: 200;
+  display: none;
+  border: 1px solid #e0e0e0;  /* 浅灰边框 */
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.floating-panel.show {
+  display: flex;
+}
+
+/* 面板头部 - 简约 */
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #fafafa;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.panel-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  position: static;
+  left: 0;
+  letter-spacing: 0.5px;
+}
+
+.panel-close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+  transition: color 0.2s;
+}
+
+.panel-close:hover {
+  color: #333;
+  background-color: transparent;
+}
+
+/* 面板内容 - 极简 */
+.panel-content {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  background-color: #fff;
+}
+/*消息红点*/
+.unread-count {
+    background: #ff4d4f;
+    color: white;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 8px;
+    font-weight: bold;
+}
+/* 面板项布局 */
+.panel-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.panel-item:last-child {
+    border-bottom: none;
+}
+
+.item-icon {
+    width: 28px;
+    font-size: 18px;
+}
+
+.item-text {
+    flex: 1;
+    font-size: 14px;
+    color: #333;
+}
+
+.edit-icon {
+    cursor: pointer;
+    transition: opacity 0.2s;
+    margin-left: 8px;
+    flex-shrink: 0;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+#schoolItem:hover .edit-icon {
+    opacity: 1 !important;
+}
+
+/* 学校编辑框 */
+.school-edit {
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 5px 0;
+}
+
+.school-edit input:focus {
+    outline: none;
+    border-color: #00a1d6 !important;
+}
+
+#saveSchool:hover {
+    background: #00b5e5 !important;
+}
+
+#cancelSchool:hover {
+    background: #e0e0e0 !important;
+}
+
+/* 累计文字 */
+.item-text h6 {
+    margin: 0;
+    font-size: 10px;
+    color: #999;
+    font-weight: normal;
+}
+
+/* 链接样式 */
+.item-text a {
+    text-decoration: none;
+    color: #333;
+}
+
+.item-text a:hover {
+    color: #00a1d6;
+}
+/* 关注弹窗 */
+.follow-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.follow-modal-content {
+    width: 400px;
+    max-height: 500px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.follow-modal-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    position: relative;
+}
+
+.follow-tab {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666;
+    border-bottom: 2px solid transparent;
+}
+
+.follow-tab.active {
+    color: #00a1d6;
+    border-bottom-color: #00a1d6;
+}
+
+.follow-tab span {
+    margin-left: 5px;
+    color: #999;
+    font-size: 12px;
+}
+
+.follow-modal-close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #999;
+}
+
+.follow-modal-close:hover {
+    color: #333;
+}
+
+.follow-modal-body {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.follow-list {
+    padding: 10px 0;
+}
+
+.follow-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.follow-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+    background: #e0e0e0;
+}
+
+.follow-info {
+    flex: 1;
+}
+
+.follow-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.follow-school {
+    font-size: 12px;
+    color: #999;
+}
+
+.follow-btn {
+    padding: 6px 16px;
+    background: #00a1d6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.follow-btn.following {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.follow-btn:hover {
+    opacity: 0.9;
+}
+
+.empty-follow {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 14px;
+}

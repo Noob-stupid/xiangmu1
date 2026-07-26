@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>--注册页面--</title>
+  <link rel="stylesheet" href="{{url_for('static', filename="MYcss/register.css")}}">
+</head>
+<body>
+  {%if error%}
+    <div class="wrong">{{error}}</div>
+    {%endif%}
+  <form action="/register" method="POST">
+    <div class="zhuce">
+    <p><label for="p1">请输入用户名:</label>
+    <input type="text" name="username" id="p1"></p>
+    <p><label for="p2">请输入&nbsp;&nbsp;&nbsp;&nbsp;密码:</label>
+    <input type="password" name="password" id="p2"></p>
+    <p><label for="p3">请确认&nbsp;&nbsp;&nbsp;&nbsp;密码:</label>
+    <input type="password" name="password1" id="p3"></p>
+    <p><label for="p4">请输入&nbsp;&nbsp;&nbsp;&nbsp;邮箱:</label>
+    <input type="email" name="email" id="p4"></p>
+    <div class="zhuce1"><input type="submit" value="注册"></div>
+    <div class="chongzhi"><input type="reset" value="重置"></div>
+    </div>
+</form>
+<div class="wenzi"><h1>校园文化创意站注册!:</h1></div>
+  <div class="nav"><a href="{{url_for('logout')}}" target="_blank"><i>返回登陆页面</i></a></div>
+</body>
+</html>

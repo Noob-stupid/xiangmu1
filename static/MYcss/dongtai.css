@@ -1,0 +1,237 @@
+/* 整体布局 - 左右两栏 */
+.box {
+    position: absolute;
+    top: 270px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    display: flex;
+    gap: 20px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    right: 0;
+    box-sizing: border-box;
+}
+
+/* 左侧发布区 */
+.publish-area {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+.publish-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.publish-card h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.publish-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 14px;
+    resize: none;
+    box-sizing: border-box;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.publish-textarea:focus {
+    border-color: #00a1d6;
+}
+
+.publish-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.upload-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-size: 13px;
+    color: #666;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.upload-btn:hover {
+    background: #e8e8e8;
+}
+
+.image-name {
+    margin-left: 8px;
+    font-size: 12px;
+    color: #999;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.publish-btn {
+    padding: 8px 20px;
+    background: #00a1d6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.publish-btn:hover {
+    background: #00b5e5;
+}
+
+.char-count {
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+}
+
+/* 图片预览 */
+.image-preview {
+    position: relative;
+    margin-top: 15px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.image-preview img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    display: block;
+}
+
+.remove-image {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.remove-image:hover {
+    background: rgba(0,0,0,0.7);
+}
+
+/* 右侧动态列表 */
+.dongtai-content {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dongtai-content h3 {
+    margin: 0 0 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: 18px;
+}
+
+/* 动态项（带图片） */
+.dynamic-item {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dynamic-item:hover {
+    background: #f8f9fa;
+}
+
+.dynamic-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.dynamic-content {
+    flex: 1;
+}
+
+.dynamic-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.dynamic-author {
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.dynamic-time {
+    font-size: 12px;
+    color: #999;
+}
+
+.dynamic-text {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.dynamic-image {
+    max-width: 200px;
+    max-height: 150px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-top: 8px;
+}
+
+/* 响应式 */
+@media (max-width: 900px) {
+    .box {
+        flex-direction: column;
+        padding: 0 15px;
+    }
+    
+    .publish-area {
+        width: 100%;
+    }
+}

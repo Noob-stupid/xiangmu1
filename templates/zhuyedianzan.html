@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加载中...的主页</title>
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/tongyi.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/shezhi.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/dianzan.css")}}">
+</head>
+<body>
+<div class="maxtop">
+  <a href=""><div class="geren"><h5>个人中心</h5></div></a>
+<ul class="toplabel">
+  <li class="shouye"><h5 class="h5top"><a href="/goto">首页</a></h5></li>
+  <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+  <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+  <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+  <li class="chuangzuo"><h5 class="h5top"><a href="">创作中心</a></h5></li>
+  <li class="sousuo"><h5 class="h5top"><a href="">搜索</a></h5></li>
+</ul>
+</div>
+
+<div class="touxiang">
+</div>
+<div class="id"><span id="showName"></span></div>
+<div class="bg1">
+<div class="qianming"><input type="text" placeholder="我是超级个性签名qwq......" value=""></div>
+</div>
+
+<div class="daohanglan"><span class="zhuye2" id="zhuye"><a href="/zhuye">主页</a></span>
+  <span class="dianzan2" id="dianzan"><a href="/zhuyedianzan">点赞</a></span>
+  <span class="shoucang2" id="shoucang"><a href="/zhuyeshoucang">收藏夹</a></span>
+  <span class="lishi2" id="lishi"><a href="/zhuyelishi">历史游览</a></span>
+  <span class="tougao2" id="tougao"><a href="/zhuyetougao">投稿</a></span>
+  <span class="dongtai2" id="dongtai"><a href="/zhuyedongtai">我的动态</a></span>
+  <span class="shezhi2" id="shezhi">设置</span>
+<div class="shenhe"><a href="/NOAIshenhe">🔺审核视频</a></div>
+  <span class="home"><a href="/index">HOME</a></span>
+</div>
+ <div class="zhuyeneirong">
+  <div class="button1"><button>粉丝视角</button>
+  </div>
+  <div class="button2"><button>新访客视角</button>
+  </div>
+ </div>
+ <hr class="hr1">
+<div class="SHEZHI"></div>
+<div class="MAXcontainer">
+ <div class="Mcontainer" id="video-container">
+    </div>
+  </div>
+  <script src="{{url_for('static',filename="MYjs/tongyiname.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/tongyi.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/dianzan.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/shezhi.js")}}"></script>
+  <script src="{{url_for('static',filename='MYjs/gaiming.js')}}"></script>
+
+</body>
+</html>

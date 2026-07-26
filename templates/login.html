@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园文化展示栏登陆页面</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='MYcss/practice.css')}}">
+</head>
+<body background="https://ts1.tc.mm.bing.net/th/id/R-C.44e8f42433f9f1967fdb001a51201218?rik=BQwrZuo6UCbt4Q&riu=http%3a%2f%2fimg.netbian.com%2ffile%2f20121017%2fb26072f1ee80cae4d709bcbcda2fc045.jpg&ehk=G4Sd5A6a5QzTg7qp%2bip9UUnaaGIkngAsiW%2fQeqezqUY%3d&risl=&pid=ImgRaw&r=0">
+    <form action="/login" method="POST">
+    <div class="d1">
+        <div>
+        <label>用户名:
+        <input type="text" name="username" placeholder="请输入用户名">
+        </label></div>
+        <div class="d11">
+        <label>密&nbsp;&nbsp;&nbsp;&nbsp;码:
+            <input type="password" name="password" placeholder="请输入密码">
+        </label>
+    </div>
+    <p>
+       <label for="">还没有注册？^_^
+        <i><a href="{{url_for('register')}}" target="_self">点我注册</a></i>
+       </label>
+        <label for="login">les'go:</label>
+        <input type="submit" name="login" value="登录">
+        {%if error%}
+    <div class="wrong">{{error}}</div>
+    {%endif%}
+    </p>
+   </div>
+
+    </form>
+</body>
+</html>

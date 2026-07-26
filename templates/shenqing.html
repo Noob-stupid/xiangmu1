@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>申请审核员</title>
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='MYcss/shenheyuan.css')}}">
+
+</head>
+<body>
+  <div class="maxtop">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+  <div class="shenheyuan-container">
+    <h2>审核员申请</h2>
+    
+    <div class="requirement">
+      <p>审核员达标要求：</p>
+      <ul>
+        <li>注册满30天</li>
+      </ul>
+    </div>
+    <button id="applyBtn" onclick="applyShenheyuan()">提交申请</button>
+    <div id="resultMsg" class="result"></div>
+  </div>
+</body>
+  <script src="{{url_for('static',filename="MYjs/shenqing.js")}}"></script>
+</html>

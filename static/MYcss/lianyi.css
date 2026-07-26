@@ -1,0 +1,124 @@
+#background-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* 背景层 */
+        .bg-layer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            will-change: clip-path;
+        }
+
+        #old-background {
+            z-index: 1;
+        }
+
+        #new-background {
+            z-index: 2;
+            clip-path: circle(0px at 50% 50%);
+            transition: clip-path 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        /* 按钮 —— 仅保留最基本操作入口 */
+        #ripple-btn {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 14px 36px;
+            background: rgba(20, 30, 40, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 48px;
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            z-index: 20;
+            transition: background 0.2s, transform 0.2s;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: none;
+            outline: none;
+            white-space: nowrap;
+        }
+
+        #ripple-btn:hover {
+            background: rgba(40, 55, 70, 0.6);
+            transform: translateX(-50%) scale(1.02);
+        }
+
+        #ripple-btn:active {
+            transform: translateX(-50%) scale(0.97);
+        }
+
+        /* 水珠效果 */
+        .water-drop {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: radial-gradient(circle at 30% 30%, 
+                rgba(255,255,255,0.95) 0%, 
+                rgba(200,230,255,0.7) 40%, 
+                rgba(255,255,255,0.2) 70%, 
+                transparent 100%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 15;
+            transform: translate(-50%, -50%);
+            opacity: 0.9;
+            filter: blur(0.5px);
+            box-shadow: 0 0 25px rgba(255,255,255,0.6);
+            animation: waterDropAnim 1s ease-out forwards;
+        }
+
+        @keyframes waterDropAnim {
+            0% {
+                opacity: 0.9;
+                transform: translate(-50%, -50%) scale(0.3);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translate(-50%, -50%) scale(2);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(3.5);
+            }
+        }
+
+        /* 涟漪波纹 */
+        .ripple-wave {
+            position: absolute;
+            border-radius: 50%;
+            border: 2.5px solid rgba(255, 255, 255, 0.5);
+            pointer-events: none;
+            z-index: 10;
+            transform: translate(-50%, -50%);
+            animation: rippleWaveAnim 1.6s ease-out forwards;
+            box-shadow: 0 0 15px rgba(255,255,240,0.3);
+        }
+
+        @keyframes rippleWaveAnim {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 0.75;
+                border-width: 4px;
+            }
+            100% {
+                width: 500px;
+                height: 500px;
+                opacity: 0;
+                border-width: 1px;
+            }
+        }

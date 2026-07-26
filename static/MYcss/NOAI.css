@@ -1,0 +1,27 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.Btngo{
+  background-color: white;
+  width: 20px;
+  display: block;
+}
+.Btnstop{
+  background-color: white;
+  width: 20px;
+  display: block;
+}
+.tongguo{
+  display: none;
+}
+.STOP{
+  display: none;
+}
+.tagspan:hover{
+ background-color: rgb(177, 240, 181);
+ cursor: pointer;
+}
+.tags span{
+  padding: 5px;
+}

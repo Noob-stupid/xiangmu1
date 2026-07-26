@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>投稿视频审核</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.common.min.js"></script>
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+<link rel="stylesheet" href="{{url_for('static',filename="MYcss/tougao.css")}}">
+</head>
+<body>
+
+<!-- 保留原有导航结构 (zongdaohang内容) -->
+<div class="maxtop">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+
+<div class="container">
+  <!-- 头部 -->
+  <div class="header">
+    <div class="logo">
+      <h1>🎨 <span>校园创意评审&投稿</span>系统</h1>
+    </div>
+    <div class="user-info">
+      👤 |<span id="showName2">加载中...</span>
+    </div>
+  </div>
+
+  <!-- 使用双列布局：左侧核心功能区，右侧多模态报告 -->
+  <div class="main-wrapper">
+    <!-- 左侧内容 -->
+    <div class="left-content">
+      <!-- 审核记录卡片 -->
+      <div class="shenheing card">
+<div>tips:如果审核记录为暂无，则为通过审核或未投稿视频！！！</div>
+        <h2>📋 我的人工审核记录:</h2>
+        <div id="statusContainer" class="status-list">
+          加载中...
+        </div>
+      </div>
+
+      <!-- 创意作品评审模块 -->
+      <div class="card">
+        <h2>📹 01. 创意作品评审</h2>
+        <div class="card-desc">审核你上传的创意作品，AI智能评估创意性、技术性和主题契合度</div>
+        
+        <div class="upload-area" onclick="document.getElementById('videoInput').click()">
+          <div class="upload-icon">🎬</div>
+          <div class="upload-text">点击上传审核创意作品</div>
+          <div class="upload-hint">支持 MP4、MOV 格式，最高不超过500MB<br>舞蹈、音乐、短剧、绘画等创意内容</div>
+        </div>
+        <input type="file" id="videoInput" accept="video/*,.mp4,.mov">
+        <div id="fileInfo" class="file-info" style="display:none"></div>
+        <input type="submit" id="shangchuan" value="上传作品">
+        <button class="btn" id="auditBtn" onclick="startAudit()" disabled>✨ 开始创意评审</button>
+        <div id="auditResult" class="result-area"></div>
+      </div>
+
+      <!-- 人工审核渠道卡片 -->
+      <div class="card">
+        <h2>🤝 AI审核太严格？↓试试人工审核^_^</h2>
+        <div style="margin: 10px 0 8px; font-weight: 500;">人工渠道：</div>
+        <input type="file" id="auditNOAI" accept="video/*,.mp4,.mov" style="display:inline-block; width:auto; margin-right:12px;">
+        <input type="submit" id="rengong" value="上传">
+      </div>
+    </div>
+
+    <!-- 右侧：多模块审核弹窗报告 (常驻卡片，非弹窗但类似弹窗效果) -->
+    <div class="right-report-panel">
+      <div class="report-header">
+        <h3>🧠 多模态审核报告</h3>
+        <span class="badge-ai">实时评估</span>
+      </div>
+      <!-- ECharts 图表容器 -->
+      <div id="reportChart" class="chart-container"></div>
+      
+      <!-- 分项指标卡片 -->
+      <div class="metrics-grid">
+    <div class="metric-card">
+        <div class="label">🎯 画面质量</div>
+        <div class="value"><span id="screenScore">0</span><span class="unit">%</span></div>
+    </div>
+    <div class="metric-card">
+        <div class="label">📝 文字主题</div>
+        <div class="value"><span id="subtitleScore">0</span><span class="unit">%</span></div>
+    </div>
+    <div class="metric-card">
+        <div class="label">⭐ 综合评分</div>
+        <div class="value"><span id="totalScore">0</span><span class="unit">%</span></div>
+    </div>
+</div>
+      
+      <div class="ai-note">
+        <span>🔍</span> 多模态AI分析: 创意指数高，建议推荐
+      </div>
+      <!-- 模拟一个小按钮查看详细 (与弹窗概念融合) -->
+      <div style="margin-top: 18px; text-align: right;">
+        <button id="refreshReportBtn" style="background: transparent; border: 1.5px solid #2a6df4; color:#1f4a8a; padding: 8px 22px; border-radius: 40px; font-weight:600; cursor:pointer;">⟳ 刷新报告</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 引用原有脚本（保持功能） -->
+<script src="{{url_for('static',filename='MYjs/shenhe.js')}}"></script>
+<script src="{{url_for('static',filename='MYjs/tougao.js')}}"></script>
+<script src="{{url_for('static',filename='MYjs/tongyiname.js')}}"></script>
+<script src="{{url_for('static',filename='MYjs/shenhe-report.js')}}"></script>
+  <!--  <script src="tougao.js"></script>
+-->
+</body>
+</html>

@@ -1,0 +1,15 @@
+.shezhi{
+  position: fixed;
+  z-index: 999;
+  width: 700px;
+  height: 800px;
+  background-color: rgba(255, 255, 255, 0.5);
+  left: 50%;
+  transform: translate(-50%);
+}
+.yinsi{
+  display: inline;
+}
+li{
+  list-style: none;
+}

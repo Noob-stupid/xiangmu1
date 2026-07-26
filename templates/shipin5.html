@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>校园创意视频广场 | 青春影像集</title>
+   
+    
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/shipin5.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+  
+</head>
+<body>
+
+<div class="maxtop">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+
+<!-- 轮播图 -->
+<div class="d2" id="d2">
+    <div id="videoContainer">
+<hr>
+
+<div class="cat-nav">
+     <div class="xiaoitem active" onclick="window.open('/duoshipin','_self')">全部</div>
+    <div class="xiaoitem hot" onclick="window.open('/hot','_self')">热门</div>
+    </div>
+    <div class="cat-nav2">
+    <div class="xiaoitem" onclick="window.open('/shipin1','_self')">校园</div>
+    <div class="xiaoitem" onclick="window.open('/shipin2','_self')">青春</div>
+    <div class="xiaoitem" onclick="window.open('/shipin3','_self')">文艺</div>
+    <div class="xiaoitem" onclick="window.open('/shipin4','_self')">运动会</div>
+    <div class="xiaoitem" onclick="window.open('/shipin5','_self')">节日</div>
+</div>
+<hr>
+<hr>
+
+       
+    
+<div class="page-title">
+            <h1>校园创意视频广场</h1>
+        </div>
+
+        <div class="top-row">
+            <div id="topTwoVideos"></div>
+            <div>
+                <div id="lunkuangtu"></div>
+                <div class="wenzi">最高点赞量/浏览量视频</div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="video-grid" id="videoGrid"></div>
+        </div>
+
+        <!-- 剩余视频 -->
+        <div class="container">
+            <div class="video-grid" id="videoGrid"></div>
+        </div>
+
+        <button class="gengduo" id="gengduoBtn">加载更多作品</button>
+    </div>
+</div>
+
+<script src="{{url_for('static',filename="MYjs/shipinye1.js")}}"></script>
+
+<script src="{{url_for('static',filename="MYjs/tongyiname.js")}}"></script>
+  
+</body>
+</html>

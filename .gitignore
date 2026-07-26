@@ -1,0 +1,15 @@
+﻿__pycache__/
+*.pyc
+*.pyo
+.env
+venv/
+*.sql
+uploads/
+*.jpg
+*.png
+*.mp4
+NOAIuploads/
+static/avatars/
+static/backgrounds/
+static/carousel/
+static/dynamics/

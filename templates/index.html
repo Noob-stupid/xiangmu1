@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园文化创意展示官网</title>
+    <link rel="stylesheet" href="{{url_for('static', filename="MYcss/lianyi.css")}}">
+  <link rel="stylesheet" href="{{url_for('static', filename="MYcss/jieshao.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+</head>
+<body>
+
+ <div class="maxtop" id="dx1">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+
+  <div class="bodybg">
+   
+    <div id="background-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;">
+        <div id="old-background" class="bg-layer" ;></div>
+        <div id="new-background" class="bg-layer"></div>
+    </div>
+    
+    <div class="header">
+        <ul>
+            <li>
+                <span>网站操作指南</span>
+            </li>
+            <li>
+                <select name="infor" id="flow1">
+                    <option value="none">视频观看</option>
+                    <option class="ripple-btn" value="1">点赞收藏</option>
+                    <option  class="ripple-btn" value="2">评论视频</option>
+                    <option class="ripple-btn" value="3">观看视频</option>
+                </select>
+            </li>
+            <li>
+                <select name="gamethink" id="flow2">
+                    <option value="none">个人中心</option>
+                    <option  class="ripple-btn" value="4">登录注册</option>
+                    <option  class="ripple-btn" value="5">观看历史</option>
+                </select>
+            </li>
+            <li>
+                <select name="thesis" id="flow3">
+                    <option value="none">作品投稿</option>
+                    <option class="ripple-btn" value="6">上传作品</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <div class="section"><div class="jieshao">
+        <h3 class="dx"><i>欢迎来到校园文化创意官网！我们将为你导航！</i></h3>
+    </div>
+
+<div class="card-item" id="card-1">
+<div>您可以实现点赞收藏视频功能</div>
+</div> 
+<div class="card-item" id="card-2">
+<div>您可以在观看视频中通过评论区评论</div>
+</div>
+<div class="card-item" id="card-3">
+<div>您可以通过视频页来观看您感兴趣的视频</div>
+</div>
+<div class="card-item" id="card-4">
+<div>您可以通过上方导航栏的个人主页来进行登录注册</div>
+</div>
+<div class="card-item" id="card-5">
+<div>您在个人主页中可以看到之前
+    点赞、收藏以及历史浏览的视频
+</div>
+</div>
+<div class="card-item" id="card-6">
+    <div>您可以通过上方导航栏中的投稿来进行视频上传</div>
+</div>
+</div>
+
+<div class="footer">
+<div id="d1" class="d1">
+<hr class="hr3">
+
+<div class="left-menu">
+  <h3>作品分类</h3>
+  <a href="/shipin1" data-type="poster">海报作品</a >
+  <a href="/shipin2" data-type="draw">手绘/绘画</a >
+  <a href="/shipin3" data-type="craft">拍摄作品</a >
+  <a href="/shipin4" data-type="product">文创周边</a >
+ 
+</div>
+
+<div class="right-content">
+    <div id="carouselWrapper" style="display:none;">
+        <div id="lunkuangtu">
+            <div class="items"></div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+</div>
+</div>
+ 
+<div id="d2" class="d2">
+<hr class="hr2"><br>
+<div><h1><i>感谢您使用我们做的网站</i></h1></div>
+    <div id="dibu"><u>制作人：吴嘉森  李冠桦</u></div>
+</div>
+</div> 
+
+<div class="hover1"><button><h5><a href="#dx1">^到顶部</a ><br>
+<a href="#dibu">_到底部</a >
+</h5></button></div>
+
+<script src="{{url_for('static',filename="MYjs/index.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/tongyiname.js")}}"></script>
+<script src="{{url_for('static',filename="MYjs/lianyi.js")}}"></script>
+</body>
+</html>

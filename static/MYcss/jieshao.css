@@ -1,0 +1,453 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+body > .bodybg,
+body > #d1,
+body > #d2 {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+/* 导航栏和悬浮按钮不参与吸附，保持在原位 */
+.maxtop, .hover1 {
+    scroll-snap-align: none;
+}
+.bodybg{
+    background-image:url(https://wallpaperm.cmcm.com/94e254e46c408b161f11c1ae12fae8bf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 60px;
+}
+.maxtop {
+      background-color: rgba(255,255,255,0.8);
+      height: 25px;
+    }
+    a {
+      text-decoration: none;
+      color: gray;
+    }
+ 
+.toplabel {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+    li {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+    li:hover {
+      transform: translateY(-15px);
+    }
+    .shouye::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-color: brown;
+      background-image: url("../static/jpg/shouye.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+    .dongtai::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../static/jpg/dongtai.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+    .shoucang::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../static/jpg/shoucang.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+    .lishi::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../static/jpg/lishi.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+    .chuangzuo::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../static/jpg/chuangzuo.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+    .sousuo::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      background-image: url("../static/jpg/sousuo.jpg");
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 0px;
+    }
+
+
+select{
+     background-color: rgba(255, 255, 255,0.1); 
+    outline: none;
+    box-shadow: 0 4px 8px ;
+    padding: 10px 15px; 
+    font-size: 18px;   
+    width: 220px; 
+} 
+
+.header {
+  margin: 10px;
+  padding: 10px;
+  position: absolute;
+  left: 200px; 
+  top: 100px;
+  width: 220px;
+  font-size: 18px;
+}
+
+select {
+  transition: all 0.3s ease; 
+}
+
+/* 鼠标放上去：轻微上浮 + 阴影加深 */
+select:hover {
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2); 
+}
+
+
+
+a{
+    text-decoration: none;
+}
+.section{
+    padding: 30px;
+    position: absolute;
+    top: 150px;
+    right: 80px;
+    width: 500px; 
+}
+.jieshao{
+    text-align: left;
+}
+.dx{
+    color:rgb(83, 83, 83);
+    font-size: 18px;
+}
+.card-item{
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: none;
+    max-width: 500px;
+    text-align: left;
+}
+.nav{
+    position: absolute;
+    width: 100%;
+    top:0;
+    background-color:rgba(255, 255, 255,0.5);
+}
+.nav a{
+    color: rgb(203, 153, 66);
+    padding:0px 10px;
+    display: inline;
+    margin: 0;
+}
+.nav a:hover{
+    background-color:rgba(255, 255, 255,0.2);
+    color: brown;
+}
+.d1{
+    color: rgb(51, 99, 99);
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    margin-top: -70px;
+    background-image: url(https://images.pexels.com/photos/1000445/pexels-photo-1000445.jpeg?auto=compress&cs=tinysrgb&w=1920);
+}
+
+
+.d2{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    position:relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    color: gold;
+    background-image: url(https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1920);
+} 
+.hover1{
+    position:fixed;
+    right: 30px;
+    bottom: 50px;
+    background-color: rgba(255, 255, 255,0.3);
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border-radius: 5px;
+}
+.hover1 a:hover{
+    background-color: rgb(142, 138, 205);
+    color: rgb(79, 69, 58);
+}
+.hover1 a{
+    color: rgb(112, 76, 76);
+}
+.hr1,.hr2,.hr3{
+    display: block;
+    width: 100%;
+    background-color: black; 
+    margin-top: -5px;
+    height: 5px; 
+    border: none; 
+}
+.tiaozhuan{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.tiaozhuan a:hover{
+     background-color:rgba(255, 255, 255,0.2);
+    color: rgb(31, 133, 133);
+}
+.tiaozhuan a{
+     color: rgb(66, 166, 113);
+    padding:0px 10px;
+    display: inline;
+}
+ 
+.left-menu {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+  transform: translateY(-50%) translateX(-150%);
+  transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 10;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 40px 0;
+}
+
+.left-menu h3 {
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 10px;
+  margin-bottom: 6px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.left-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 30px 30px;
+  font-size: 25px;
+  background: gray;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+/* 阶梯长度：1最长 → 4最短 */
+.left-menu a:nth-child(2) { width: 150%; }
+.left-menu a:nth-child(3) { width: 120%; }
+.left-menu a:nth-child(4) { width: 94%; }
+.left-menu a:nth-child(5) { width: 70%; }
+
+.left-menu a:hover {
+  background: grey;
+  color: yellow;
+  transform: translateX(6px);
+  box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 20; 
+}
+
+.left-menu.show {
+  transform: translateY(-50%) translateX(0);
+}
+
+.d1 {
+  position: relative; 
+  overflow: hidden;    
+}
+
+
+.right-content {
+  position: absolute;
+  top: 50%;
+  left: 60%;                  
+  transform: translate(-50%, -50%);
+  width: 75%;
+  max-width: 900px;
+  z-index: 5;
+}
+
+#lunkuangtu {
+  width: 100%;
+  height: 70vh;               
+  min-height: 500px;
+  position: relative;
+  overflow: hidden;
+  background: #1e1e2a;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+.items {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.items.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 30;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  transition: all 0.3s;
+  padding: 3px;
+  background-color: gray;
+  box-sizing: content-box;
+}
+
+.dot.active {
+  background: white;
+  width: 28px;
+  border-radius: 6px;
+} 
+select {
+  animation: textFade 1.5s ease forwards;
+  opacity: 0;
+}
+@keyframes textFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+#flow1 { animation-delay: 0.2s; }
+#flow2 { animation-delay: 0.4s; }
+#flow3 { animation-delay: 0.6s; }
+/* 右侧整体文字延迟淡入 */
+.section {
+  opacity: 0;
+  animation: rightFadeIn 1.2s ease-out forwards;
+  animation-delay: 0.8s; /* 比左边晚出来 */
+}
+
+/* 卡片每个都延迟，依次慢出 */
+.card-item {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.5s ease;
+}
+.card-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes rightFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate(20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+#lunkuangtu {
+    z-index: 100;
+    position: relative;
+}
+
+.items {
+    z-index: 100;
+}
+
+.right-content {
+    z-index: 100;
+}

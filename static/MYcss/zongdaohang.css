@@ -1,0 +1,130 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+}
+.maxtop{
+  background-color: rgba(255,255,255,0.8);
+  height: 25px;
+  z-index: 1;
+  position: relative;
+}
+.maxtop a{
+  text-decoration: none;
+  color: gray;
+}
+.home a{
+  color: #000;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+.toplabel{
+  position: absolute;
+  top: -9px;
+  right: 0px;
+  margin: 0;
+  display: flex;
+}
+.shouye,.dongtai,.shoucang,.lishi,.chuangzuo,.sousuo{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  transition: transform 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.shouye:hover,.dongtai:hover,.shoucang:hover,.lishi:hover,.chuangzuo:hover,.sousuo:hover{
+  transform: translateY(-15px);
+  
+}
+.shouye{
+  position: relative;
+  z-index: 1000;
+}
+.shouye a{
+  position: relative;
+  z-index: 1001;
+}
+.shouye::before{
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: brown;
+  background-image: url("/static/jpg/shouye.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.dongtai::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/jpg/dongtai.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.shoucang::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/jpg/shoucang.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.lishi::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/jpg/lishi.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.chuangzuo::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/jpg/chuangzuo.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.sousuo::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("/static/jpg/sousuo.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.geren{
+  display: flex;
+  color: black;
+}
+.geren::before{
+  width: 35px;
+  height: 35px;
+  content: "";
+  display: inline-block;
+  background-color: black;
+  background-image: url("/static/jpg/user.jpg");
+  background-size: cover;
+  background-position: center;
+}

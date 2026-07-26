@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>展示站作品搜索</title>
+    <link rel="stylesheet" href="{{url_for('static',filename="MYcss/search.css")}}">
+    <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div class="maxtop">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+
+    <!-- 主体内容 -->
+    <div class="main-content" id="mainContent">
+        <!-- 首页大搜索 -->
+        <div class="home-search" id="homeSearch">
+            <div class="logo-large">校园作品搜索</div>
+            <div class="search-box">
+                <input type="text" id="homeSearchInput" placeholder="搜索你感兴趣的视频..." autofocus>
+                <button onclick="doSearch('home')">搜索</button>
+            </div>
+            <div class="hot-tags" id="hotTags">
+                <span class="hot-tag" onclick="searchHot('舞蹈')">舞蹈</span>
+                <span class="hot-tag" onclick="searchHot('音乐')">音乐</span>
+                <span class="hot-tag" onclick="searchHot('体育')">体育</span>
+                <span class="hot-tag" onclick="searchHot('毕业')">毕业</span>
+                <span class="hot-tag" onclick="searchHot('创意')">创意</span>
+                <span class="hot-tag" onclick="searchHot('搞笑')">搞笑</span>
+            </div>
+        </div>
+
+        <!-- 搜索结果区域 -->
+        <div id="searchResults" style="display: none;">
+            <div class="search-header">
+                <h3>搜索 "<span id="searchQuery"></span>" 的结果，共 <span id="resultCount">0</span> 条</h3>
+            </div>
+            <div class="result-list" id="resultList"></div>
+            <div class="back-home">
+                <a href="javascript:showHomeSearch()">返回搜索</a>
+            </div>
+        </div>
+    </div>
+
+      <script src="{{url_for('static',filename="MYjs/search.js")}}"></script>
+
+</body>
+</html>

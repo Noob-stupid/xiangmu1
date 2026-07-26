@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>人工审核</title>
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/NOAI.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+
+</head>
+<body>
+  <div class="maxtop">
+  <a href="/zhuye"><div class="geren"><h5><span id="showName">个人中心</span></h5></div></a>
+  <ul class="toplabel">
+    <li class="shouye"><h5 class="h5top"><a href="/index">首页</a></h5></li>
+    <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+    <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+    <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+    <li class="chuangzuo"><h5 class="h5top"><a href="/tougao">创作中心</a></h5></li>
+    <li class="sousuo"><h5 class="h5top"><a href="/search">搜索</a></h5></li>
+  </ul>
+</div>
+  
+  <div class="videocontainer"><video id="videoNOAI" src="" controls width="50%" height="50%"></video></div>
+  <div class="tags"></div>
+  <button id="ok" class="Btngo">√</button>
+  <form id="myForm">
+  <div class="tongguo">
+      <select name="label" id="labelselect">
+        <option value="None">下拉选择标签</option>
+        <option value="schoolife">校园生活记录</option>
+        <option value="schoolperform">校园文艺表演</option>
+        <option value="schoolexercise">校园体育/健身</option>
+        <option value="schoolfestival">节日校庆</option>
+      </select>
+      <input type="submit"><!--实现提交数据后页面不动，播放下个审核视频然后出现弹窗持续3s视频通过提示-->
+  </div>
+  </form>
+  <button id="no" class="Btnstop">x</button>
+  <div class="STOP"><h3>审核未通过原因:</h3><input type="text" id="rejectReason" placeholder="请输入不通过原因">
+   <div class="next"><button id="confirmReject">不通过,下个视频</button></div><!--实现视频播放器播放下个审核视频功能-->
+  </div>
+  <button id="re" class="re">重审</button>
+  <div>tips:如未接收到视频，则为当前没有视频需人工审核</div>
+  
+    <script src="{{url_for('static',filename="MYjs/NOAI.js")}}"></script>
+<script src="{{url_for('static',filename='MYjs/tongyiname.js')}}"></script>
+
+</body>
+</html>

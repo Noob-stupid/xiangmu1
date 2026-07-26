@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>加载中...的主页</title>
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zongdaohang.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/tongyi.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/zhuye.css")}}">
+  <link rel="stylesheet" href="{{url_for('static',filename="MYcss/shezhi.css")}}">
+</head>
+<body>
+<div class="maxtop">
+  <a href=""><div class="geren"><h5>个人中心</h5>
+  </div></a>
+<ul class="toplabel">
+  <li class="shouye"><h5 class="h5top"><a href="/goto">首页</a></h5></li>
+  <li class="dongtai"><h5 class="h5top"><a href="/zhuyedongtai">动态</a></h5></li>
+  <li class="shoucang"><h5 class="h5top"><a href="/zhuyeshoucang">收藏</a></h5></li>
+  <li class="lishi"><h5 class="h5top"><a href="/zhuyelishi">历史</a></h5></li>
+  <li class="chuangzuo"><h5 class="h5top"><a href="">创作中心</a></h5></li>
+  <li class="sousuo"><h5 class="h5top"><a href="">搜索</a></h5></li>
+</ul>
+</div>
+
+<div class="touxiang">
+</div>
+<div class="id"><span id="showName"></span></div>
+<div class="bg1">
+<div class="qianming"><input type="text" placeholder="我是超级个性签名qwq......" value=""></div>
+</div>
+
+<div class="daohanglan"><span class="zhuye2" id="zhuye"><a href="/zhuye">主页</a></span>
+  <span class="dianzan2" id="dianzan"><a href="/zhuyedianzan">点赞</a></span>
+  <span class="shoucang2" id="shoucang"><a href="/zhuyeshoucang">收藏夹</a></span>
+  <span class="lishi2" id="lishi"><a href="/zhuyelishi">历史游览</a></span>
+  <span class="tougao2" id="tougao"><a href="/zhuyetougao">投稿</a></span>
+  <span class="dongtai2" id="dongtai"><a href="/zhuyedongtai">我的动态</a></span>
+  <span class="shezhi2" id="shezhi">设置</span>
+  <div class="shenqing"><a href="/shenqing">★申请审核员</a></div>
+<div class="shenhe"><a href="/NOAIshenhe">🔺审核视频</a></div>
+  <span class="home"><a href="/index">HOME</a></span>
+</div>
+ <div class="zhuyeneirong">
+  <div class="button1"><button>粉丝视角</button>
+  </div>
+  <div class="button2"><button>新访客视角</button>
+  </div>
+ </div>
+ <!--悬浮窗按钮-->
+<div class="right-toggle-btn" id="togglePanelBtn">
+    <span>信息中心</span>
+</div>
+ <!-- 悬浮窗面板 --><!--待完成。。。。。。。。-->
+<div class="floating-panel" id="floatingPanel">
+    <div class="panel-header">
+        <h3>~_~信息中心</h3>
+        <div class="panel-close" id="closePanelBtn">✕</div>
+    </div>
+    <div class="panel-content">
+        <div class="panel-item" id="schoolItem" style="cursor: pointer;">
+            <span class="item-icon">🏫</span>
+            <span class="item-text">学校:<br><span id="schoolValue">未公开</span></span>
+            <span class="edit-icon" style="margin-left: auto; opacity: 0.6; font-size: 14px;">✏️</span>
+</div>
+
+<!-- 学校编辑框（默认隐藏） -->
+<div class="school-edit" id="schoolEdit" style="display: none; padding: 10px 15px;">
+    <input type="text" id="schoolInput" placeholder="请输入学校名称" maxlength="50" style="flex:1;padding:6px;border:1px solid #ddd;border-radius:4px;">
+    <button id="saveSchool" style="margin-left:8px;padding:6px 12px;background:#00a1d6;color:white;border:none;border-radius:4px;cursor:pointer;">保存</button>
+    <button id="cancelSchool" style="margin-left:4px;padding:6px 12px;background:#f5f5f5;color:#666;border:none;border-radius:4px;cursor:pointer;">取消</button>
+</div>
+
+        
+        <div class="panel-item">
+            <span class="item-icon">☺</span>
+            <span class="item-text"><h6>累计</h6>获得点赞:<span id="totalLikes">0</span></span>
+        </div>
+        <div class="panel-item" id="notificationInfo" style="cursor: pointer;">
+            <span class="item-icon">🔔</span><!--转到动态，动态页面也需完善-->
+            <span class="item-text">通知消息</span>
+            <span class="unread-count" id="infoUnreadBadge" style="display:none;">0</span>
+        </div>
+        <!-- 关注和粉丝 -->
+    <div class="panel-item" id="followInfo" style="cursor: pointer;">
+        <span class="item-icon">👥</span>
+        <span class="item-text">
+            <span id="followingCount">0</span> 关注 · 
+            <span id="followersCount">0</span> 粉丝
+        </span>
+    </div>
+        <div class="panel-item">
+            <span class="item-icon">🖊</span>
+            <span class="item-text"><a href="/zhuyetougao">我的作品</a></span>
+        </div>
+    </div>
+    </div>
+<!-- 关注列表弹窗 -->
+<div class="follow-modal" id="followModal" style="display: none;">
+    <div class="follow-modal-content">
+        <div class="follow-modal-header">
+            <div class="follow-tab active" data-tab="following">我的关注 </div>
+            <div class="follow-tab" data-tab="followers">我的粉丝 </div>
+            <span class="follow-modal-close" id="closeFollowModal">✕</span>
+        </div>
+        <div class="follow-modal-body">
+            <div class="follow-list" id="followingList"></div>
+            <div class="follow-list" id="followersList" style="display: none;"></div>
+        </div>
+    </div>
+</div>
+
+ <hr class="hr1">
+ <div class="SHEZHI"></div>
+ <div class="biaoti1">
+
+    <!-- 更换背景弹窗 -->
+<div id="bgModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#fff; padding:25px; border-radius:10px; width:400px; text-align:center;">
+    <h4>更换收藏夹背景</h4>
+    <input type="file" id="bgFile" accept="image/*" style="margin:15px 0;"><br>
+    <button id="saveBgBtn" class="buttonchakan">确认上传</button>
+    <button id="closeModal" style="margin-left:10px;">取消</button>
+    <p id="uploadTip" style="color:red; margin-top:10px;"></p>
+  </div>
+  <!-- 原有上传区域不动 -->
+<div style="margin-top:20px;border-top:1px solid #eee;padding-top:15px;">
+  <div style="margin-bottom:10px;font-weight:bold;">已上传背景图管理</div>
+  <div id="bgImageList" style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-height:300px;overflow-y:auto;">
+    <!-- 图片列表动态渲染在这里 -->
+  </div>
+</div>
+</div>
+
+ <h3>收藏夹 <a href="javascript:;" id="openBgSetting" style="margin-left:8px;cursor:pointer;">⚙</a>
+</h3><!--进行修改收藏夹卡片封面的小设置（修改/static/images/default-fav(n).jpg）-->
+    <div class="fav-list" id="fav-container">
+         <button class="buttonchakan"><a href="/zhuyeshoucang">查看更多》》</a></button>
+    </div>
+    <hr class="hr2">
+</div>
+  <div class="biaoti2">
+    <h3>最近点赞</h3><!--完善他的查看更多的zhuyedianzan界面-->
+    <div class="fav-list" id="video-container">
+      <button class="buttonchakan2"><a href="/zhuyedianzan">查看更多》》</a></button>
+    </div>
+      <hr class="hr3">
+  </div>
+  <div class="biaoti3">
+    <h3>最近浏览</h3><!--完善，并完善浏览界面-->
+    <div class="fav-list" id="video-container2">
+      <button class="buttonchakan3"><a href="/zhuyelishi">查看更多》》</a></button>
+    </div>
+  </div>
+  <script src="{{url_for('static',filename="MYjs/tongyi.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/geren.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/shezhi.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/zhuye.js")}}"></script>
+  <script src="{{url_for('static',filename="MYjs/tongyiname.js")}}"></script>
+  <script src="{{url_for('static',filename='MYjs/gaiming.js')}}"></script>
+</body>
+</html>

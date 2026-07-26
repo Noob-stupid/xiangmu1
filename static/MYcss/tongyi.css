@@ -1,0 +1,178 @@
+.qianming input{
+  position:absolute;
+  right: 300px;
+  top: 200px;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  color: gray;
+  border: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+.bg1{
+  top: 0;
+  z-index: 8;
+  position: absolute;
+  background-color: pink;
+  width: 100%;
+  height: 250px;
+  background-image: url("../jpg/beijing.jpg");/*写文件路径，上传的*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.id{
+  position: absolute;
+  right: 100px;
+  z-index: 9999;
+  top: 50px;
+}
+.touxiang{
+  z-index: 9999;
+  display: flex;
+  background-color: brown;
+  background-image: url("/static/jpg/user.jpg");/*d*/
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  right: 50px;
+  top: 75px;
+}
+.daohanglan{
+  width: 100%;
+  background-color: white;
+  top: 225px;
+  position: absolute;
+  z-index: 9;
+}
+span{
+  padding: 20px;
+  
+}
+.zhuye2,.dianzan2,.shoucang2,.lishi2,.tougao2,.dongtai2,.shezhi2{
+  display: inline;
+  padding: 0px 0px;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+.zhuye2 a:hover,.dianzan2 a:hover,.shoucang2 a:hover,.lishi2 a:hover,.tougao2 a:hover,
+.dongtai2 a:hover,.shezhi2:hover{
+  background-color:rgb(138, 139, 184,0.5);
+  color: rgb(90, 163, 152);
+}
+.shenqing{
+  display: inline-block;
+  
+}
+.shenhe{
+  display: none;
+  /* display: inline-block; */
+  position: relative;
+  
+}
+.zhuye2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/shouye2.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.dianzan2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+  background-image: url("../jpg/dianzan.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.shoucang2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/shoucang2.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.lishi2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/lishi2.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.tougao2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/tougao.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.dongtai2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/dongtai2.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.shezhi2::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/shezhi.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.home::before{
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 3px;
+  background-image: url("../jpg/home.jpg");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 0px;
+}
+.hr1{
+  position: absolute;
+  top: 250px;
+  width: 100%;
+  border: none;
+  height: 2px;
+  background-color: rgb(109, 205, 240);
+  margin: 0;
+  z-index: 10;
+}

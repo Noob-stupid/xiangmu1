@@ -1,0 +1,385 @@
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+/* ========== 头部 - 方正简洁 ========== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 28px;
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 0;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.logo span {
+    color: #1890ff;
+}
+
+.user-info {
+    background: #f5f5f5;
+    padding: 8px 20px;
+    border: 1px solid #d9d9d9;
+    color: #333;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+/* ========== 提示条 ========== */
+.container > div:nth-of-type(2) {/*container > div:nth-of-type(2) 是一个 CSS 选择器，用于选择 .container 内部的第二个 div 元素。*/
+    background: #fffbe6;
+    padding: 10px 18px;
+    margin: 0 0 20px 0;
+    border: 1px solid #ffe58f;
+    border-left: 4px solid #faad14;
+    color: #7a5a00;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+/* ========== 双列布局 ========== */
+.main-wrapper {
+    display: flex;
+    gap: 24px;
+    align-items: stretch;
+}
+
+.left-content {
+    flex: 2;
+    min-width: 0;
+}
+
+/* ========== 右侧报告面板 - 方正简约 ========== */
+.right-report-panel {
+    flex: 1.2;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 24px 20px;
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.report-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid #e8e8e8;
+}
+
+.report-header h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.badge-ai {
+    background: #1890ff;
+    color: white;
+    padding: 4px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+/* ========== 图表容器 ========== */
+.chart-container {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 24px;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 8px;
+    border-radius: 0;
+}
+
+/* ========== 指标卡片 - 方正网格 ========== */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;  /* 三列 */
+    gap: 12px;
+}
+
+.metric-card {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    padding: 16px 10px;
+    text-align: center;
+    border-radius: 0;
+    transition: border-color 0.2s;
+}
+
+.metric-card:hover {
+    border-color: #1890ff;
+}
+
+.metric-card .label {
+    color: #595959;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.metric-card .value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1890ff;
+}
+
+.metric-card .unit {
+    font-size: 13px;
+    color: #8c8c8c;
+    margin-left: 2px;
+}
+
+/* ========== AI 分析提示 ========== */
+.ai-note {
+    margin-top: 20px;
+    background: #f6ffed;
+    border: 1px solid #b7eb8f;
+    padding: 12px 16px;
+    color: #52c41a;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 0;
+}
+
+/* ========== 卡片通用样式 - 方正 ========== */
+.card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 24px 26px;
+    margin-bottom: 24px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-desc {
+    color: #666;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* ========== 审核记录卡片 ========== */
+.shenheing.card {
+    background: #ffffff;
+}
+
+.status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.status-item {
+    background: #fafafa;
+    padding: 12px 18px;
+    border: 1px solid #e8e8e8;
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+    border-radius: 0;
+}
+
+.status-item::before {
+    content: "📋";
+    margin-right: 10px;
+}
+
+/* ========== 上传区域 - 方正 ========== */
+.upload-area {
+    background: #fafafa;
+    border: 1px dashed #d9d9d9;
+    padding: 32px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+    margin-bottom: 18px;
+    border-radius: 0;
+}
+
+.upload-area:hover {
+    border-color: #1890ff;
+    background: #f5f5f5;
+}
+
+.upload-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.upload-text {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1a1a1a;
+}
+
+.upload-hint {
+    color: #8c8c8c;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ========== 文件信息 ========== */
+.file-info {
+    margin: 12px 0;
+    padding: 10px 16px;
+    background: #f0f0f0;
+    border: 1px solid #d9d9d9;
+    color: #333;
+    font-weight: 500;
+    border-radius: 0;
+}
+
+/* ========== 按钮 - 方正风格 ========== */
+.btn,
+input[type="submit"] {
+    background: #1890ff;
+    border: 1px solid #1890ff;
+    color: white;
+    font-weight: 500;
+    padding: 10px 24px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-right: 10px;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.btn:hover,
+input[type="submit"]:hover {
+    background: #40a9ff;
+    border-color: #40a9ff;
+}
+
+.btn:disabled {
+    background: #d9d9d9;
+    border-color: #d9d9d9;
+    color: #8c8c8c;
+    cursor: not-allowed;
+    opacity: 1;
+}
+
+/* 人工渠道的上传按钮 */
+input#rengong {
+    background: #52c41a;
+    border-color: #52c41a;
+}
+
+input#rengong:hover {
+    background: #73d13d;
+    border-color: #73d13d;
+}
+
+/* 刷新按钮 */
+#refreshReportBtn {
+    background: transparent !important;
+    border: 1px solid #d9d9d9 !important;
+    color: #595959 !important;
+    padding: 8px 20px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    border-radius: 0 !important;
+}
+
+#refreshReportBtn:hover {
+    border-color: #1890ff !important;
+    color: #1890ff !important;
+    background: #fafafa !important;
+}
+
+/* ========== 评审结果区域 ========== */
+.result-area {
+    margin-top: 20px;
+    padding: 18px;
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.8;
+    border-radius: 0;
+}
+
+/* ========== 人工渠道卡片特殊处理 ========== */
+.card:last-of-type {
+    background: #ffffff;
+}
+
+.card:last-of-type h2 {
+    color: #1a1a1a;
+}
+
+/* ========== 隐藏默认文件输入 ========== */
+input[type="file"] {
+    display: none;
+}
+
+/* 人工渠道的文件输入显示出来 */
+input#auditNOAI {
+    display: inline-block;
+    width: auto;
+    margin-right: 12px;
+    padding: 8px 12px;
+    background: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 0;
+    font-size: 13px;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 900px) {
+    body {
+        padding: 16px;
+    }
+
+    .main-wrapper {
+        flex-direction: column;
+    }
+
+    .right-report-panel {
+        position: static;
+        width: 100%;
+    }
+
+    .header {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
